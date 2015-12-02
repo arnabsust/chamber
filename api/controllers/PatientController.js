@@ -7,7 +7,8 @@
 
 module.exports = {
     findPatientByNID: function(req, res) {
-        var id = req.param(id);
+        var id = req.param('id');
+        console.log(id);
         Patient.findOne({
             NID: id
         }).exec(function(err, patient) {
